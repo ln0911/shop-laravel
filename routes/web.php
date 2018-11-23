@@ -16,3 +16,15 @@ Route::get('/', 'PagesController@root')->name('root');
 
 Auth::routes();
 
+
+Route::group(['middleware'=>'auth'],function(){
+    Route::get('/email_verify_notice','PagesController@emailVerifyNotice')->name('email_verify_notice');
+
+    //邮箱验证开始
+     Route::group(['middleware'=>'email_verified'],function (){
+        Route::get('/test',function (){
+            return 'this is test email verified';
+        }) ;
+     });
+    //结束
+});
