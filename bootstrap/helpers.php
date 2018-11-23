@@ -9,3 +9,8 @@ function test_helper()
 {
     return "test helper";
 }
+
+function route_class()
+{
+    return str_replace('.', '-', Route::currentRouteName());
+}
