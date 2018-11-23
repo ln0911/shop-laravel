@@ -39,7 +39,7 @@
                                     <form action="{{ route('user_addresses.destroy', ['user_address' => $address->id]) }}" method="post" style="display: inline-block">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
-                                        <button class="btn btn-danger btn-del-address" data-id="{{ $address->id }}" type="submit">删除</button>
+                                        <button class="btn btn-danger btn-del-address" type="button" data-id="{{ $address->id }}">删除</button>
                                     </form>
                                 </td>
                             </tr>
