@@ -18,10 +18,10 @@ class CreateProductsTable extends Migration
             $table->string('title');
             $table->text('description');
             $table->string('image');
-            $table->boolean('on_sale')->defalut(false);
-            $table->float('rating')->defalut(5);
-            $table->unsignedInteger('sold_count')->defalut(0);
-            $table->unsignedInteger('review_count')->defalut(0);
+            $table->boolean('on_sale')->default(false);
+            $table->float('rating')->default(5);
+            $table->unsignedInteger('sold_count')->default(0);
+            $table->unsignedInteger('review_count')->default(0);
             $table->decimal('price',10,2);
             $table->timestamps();
         });

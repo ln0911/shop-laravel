@@ -15,7 +15,7 @@ class Product extends Model
 
 
     //Sku
-    protected function skus()
+    public function skus()
     {
         return $this->hasMany(ProductSku::class);
     }
