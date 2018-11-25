@@ -55,6 +55,10 @@ class Order extends Model
     public function items(){
         return $this->hasMany(OrderItem::class);
     }
+    public function couponCode()
+    {
+        return $this->belongsTo(CouponCode::class);
+    }
 
 
     protected static function boot()
