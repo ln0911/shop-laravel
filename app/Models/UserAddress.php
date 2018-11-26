@@ -11,6 +11,8 @@ class UserAddress extends Model
     ];
 
     protected $dates = ['last_used_at'];
+    protected $appends = ['full_address'];
+
 
     /**
      * 所属用户
