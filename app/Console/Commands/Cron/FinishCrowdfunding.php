@@ -4,8 +4,6 @@ namespace App\Console\Commands\Cron;
 
 use App\Jobs\RefundCrowdfundingOrders;
 use App\Models\CrowdfundingProduct;
-use App\Models\Order;
-use App\Services\OrderService;
 use Carbon\Carbon;
 use Illuminate\Console\Command;
 
@@ -42,6 +40,7 @@ class FinishCrowdfunding extends Command
      */
     public function handle()
     {
+
         CrowdfundingProduct::query()
             // 预加载商品数据
             ->with(['product'])
@@ -56,7 +55,7 @@ class FinishCrowdfunding extends Command
                     // 调用众筹失败逻辑
                     $this->crowdfundingFailed($crowdfunding);
                 } else {
-                    // 否则调用众筹成功逻辑
+                    // 调用众筹成功逻辑
                     $this->crowdfundingSucceed($crowdfunding);
                 }
             });
