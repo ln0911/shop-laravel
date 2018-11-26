@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.21, for Linux (x86_64)
 --
--- Host: localhost    Database: laravel-shop
+-- Host: 127.0.0.1    Database: laravel-shop-two
 -- ------------------------------------------------------
 -- Server version	5.7.21-0ubuntu0.16.04.1
 
@@ -21,7 +21,7 @@
 
 LOCK TABLES `admin_menu` WRITE;
 /*!40000 ALTER TABLE `admin_menu` DISABLE KEYS */;
-INSERT INTO `admin_menu` VALUES (1,0,1,'首页','fa-bar-chart','/',NULL,'2018-11-20 01:29:41'),(2,0,5,'系统管理','fa-tasks',NULL,NULL,'2018-11-20 06:55:44'),(3,2,6,'管理员','fa-users','auth/users',NULL,'2018-11-20 06:55:44'),(4,2,7,'角色','fa-user','auth/roles',NULL,'2018-11-20 06:55:44'),(5,2,8,'权限','fa-ban','auth/permissions',NULL,'2018-11-20 06:55:44'),(6,2,9,'菜单','fa-bars','auth/menu',NULL,'2018-11-20 06:55:44'),(7,2,10,'操作日志','fa-history','auth/logs',NULL,'2018-11-20 06:55:44'),(8,0,4,'用户管理','fa-users','/users','2018-11-20 01:39:08','2018-11-20 06:55:44'),(9,0,2,'商品管理','fa-cubes','/products','2018-11-20 01:56:52','2018-11-20 06:55:44'),(10,0,3,'订单管理','fa-rmb','/orders','2018-11-20 06:54:37','2018-11-20 06:55:44'),(12,0,11,'数据库','fa-database','logs','2018-11-21 02:17:22','2018-11-21 02:19:55'),(14,12,0,'Redis','fa-database','/redis','2018-11-21 02:20:19','2018-11-21 02:20:19'),(15,12,0,'logs','fa-file-o','/logs','2018-11-21 02:20:37','2018-11-21 02:20:51'),(16,0,0,'优惠券','fa-tags','/coupon_codes','2018-11-22 02:19:19','2018-11-22 02:19:19');
+INSERT INTO `admin_menu` VALUES (1,0,1,'首页','fa-bar-chart','/',NULL,'2018-11-20 01:29:41'),(2,0,6,'系统管理','fa-tasks',NULL,NULL,'2018-11-26 20:31:58'),(3,2,7,'管理员','fa-users','auth/users',NULL,'2018-11-26 20:31:58'),(4,2,8,'角色','fa-user','auth/roles',NULL,'2018-11-26 20:31:58'),(5,2,9,'权限','fa-ban','auth/permissions',NULL,'2018-11-26 20:31:58'),(6,2,10,'菜单','fa-bars','auth/menu',NULL,'2018-11-26 20:31:58'),(7,2,11,'操作日志','fa-history','auth/logs',NULL,'2018-11-26 20:31:58'),(8,0,5,'用户管理','fa-users','/users','2018-11-20 01:39:08','2018-11-26 20:31:58'),(9,0,3,'商品管理','fa-cubes','/products','2018-11-20 01:56:52','2018-11-26 20:31:58'),(10,0,4,'订单管理','fa-rmb','/orders','2018-11-20 06:54:37','2018-11-26 20:31:58'),(12,0,12,'数据库','fa-database','logs','2018-11-21 02:17:22','2018-11-26 20:31:58'),(14,12,13,'Redis','fa-database','/redis','2018-11-21 02:20:19','2018-11-26 20:31:58'),(15,12,14,'logs','fa-file-o','/logs','2018-11-21 02:20:37','2018-11-26 20:31:58'),(16,0,15,'优惠券','fa-tags','/coupon_codes','2018-11-22 02:19:19','2018-11-26 20:31:58'),(17,0,2,'商品类目','fa-bars','/categories','2018-11-26 20:31:48','2018-11-26 20:31:58');
 /*!40000 ALTER TABLE `admin_menu` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -103,4 +103,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-26 10:59:13
+-- Dump completed on 2018-11-26 12:36:55
