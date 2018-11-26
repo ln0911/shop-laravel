@@ -35,7 +35,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->singleton('alipay',function (){
            $config = config('pay.alipay');
 
-           $config['notify_url'] = 'http://requestbin.fullcontact.com/zy2h9vzy';//route('payment.alipay.notify');
+           $config['notify_url'] = ngrok_url('payment.alipay.notify');//route('payment.alipay.notify');
            $config['return_url'] = route('payment.alipay.return');
 
            if(app()->environment() !== 'production')
