@@ -91,6 +91,7 @@ class ProductsController extends Controller
     protected function grid()
     {
         return Admin::grid(Product::class,function (Grid $grid){
+            $grid->model()->where('type', Product::TYPE_NORMAL)->with(['category']);
 
             $grid->id('ID')->sorttable();
             $grid->title('商品名称');
@@ -148,6 +149,8 @@ class ProductsController extends Controller
     protected function form()
     {
        return Admin::form(Product::class,function(Form $form){
+           // 在表单中添加一个名为 type，值为 Product::TYPE_NORMAL 的隐藏字段
+           $form->hidden('type')->value(Product::TYPE_NORMAL);
            // 创建一个输入框，第一个参数 title 是模型的字段名，第二个参数是该字段描述
            $form->text('title','商品名称')->rules('required');
            // 添加一个类目字段，与之前类目管理类似，使用 Ajax 的方式来搜索添加
